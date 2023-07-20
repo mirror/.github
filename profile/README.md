@@ -1,3 +1,23 @@
+### Updating projects
+
+If you want to update a stale old mirror collecting dust that has missed some action through the years. Clone the out of date mirror from here and try to run a rebase over it from the official location
+
+These commands might help or might even work directly without modification
+
+```
+sudo apt install git git-svn git-bzr git-cvs
+
+git clone http://github.com/mirror/mirror
+
+# Look for the command
+cat git_mirror
+# Or hope it will print the command it is trying to perform
+. git_mirror
+git_mirror waver bzr https://code.launchpad.net/~waver-developers/waver/trunk
+```
+
+If the rebase failed you might open a public issue if anyone is bothered that the entire history has to be rewritten. That a force push is required because the rebase failed. Everyone will probably understand and you can push the update
+
 ### Organisational overview
 
 The purpose is to promote collaboration and connection between worlds
